@@ -1,0 +1,17 @@
+<div class="container"  style="margin-top: 150px" >
+  <h1 class="text-center">Student Login</h1>
+  <form #submitForm="ngForm" (ngSubmit)="login(submitForm)">
+      <div>
+      <input  type="text" name="email" #email="ngModel" ngModel placeholder="Email"  required email />
+      <!-- <div class="alert alert-danger" *ngIF="!email.value" >password not validate</div> -->
+
+      </div>
+      <div>
+      <input  type="text" name="pass" #pass="ngModel" ngModel placeholder="Password" required  />
+      <!-- <div class="alert alert-danger" *ngIF="!pass.value" >password not validate</div> -->
+      </div>
+      <button type="submit" class="btn btn-success"  color="primary">Login</button>
+      </form> 
+   </div>
+
+   
