@@ -92,7 +92,11 @@
             <label for="email">Email</label>
             <input type="text"  class="form-control"  [value]="mystuffs.email" placeholder="Enter Your email"  ngModel  name="email" #email="ngModel"  required>
             </div>
-            <p class="alert-danger" *ngIf="!email.valid && email.touched">Content Is Required</p><br />
+            <div class="form-group">
+              <label for="email">Password</label>
+              <input type="text"  class="form-control"  [value]="mystuffs.pass" placeholder="Enter Your pass"  ngModel  name="pass" #pass="ngModel"  required>
+              </div>
+            <p class="alert-danger" *ngIf="!pass.valid && pass.touched">Content Is Required</p><br />
             <div class="form-group">
             <label for="phone">Phone</label>
             <input type="text"  class="form-control"  [value]="mystuffs.phone" placeholder="Enter Your  phone"  ngModel  name="phone" #phone="ngModel"  required>
@@ -173,6 +177,12 @@
             <label for="email">Email</label>
             <input type="text"  class="form-control" placeholder="Enter Your email"  ngModel  name="email" #email="ngModel"  required>
             </div>
+            
+            <div class="form-group">
+              <label for="email">Password</label>
+              <input type="text"  class="form-control"  [value]="mystuffs.pass" placeholder="Enter Your pass"  ngModel  name="pass" #pass="ngModel"  required>
+              </div>
+            <p class="alert-danger" *ngIf="!pass.valid && pass.touched">Content Is Required</p><br />
             <!-- <p class="alert-danger" *ngIf="!email.valid && email.touched">Content Is Required</p><br /> -->
             <div class="form-group">
             <label for="phone">Phone</label>

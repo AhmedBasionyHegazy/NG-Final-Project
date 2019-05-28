@@ -32,12 +32,13 @@ export class LoginComponent implements OnInit {
     this.http.get('http://localhost:31436/api/stuffs?email='+data.value.email+'&password='+data.value.pass)
     .subscribe(
       response=>{
-          if(response.json() == 1){
-            this.auth.sendToken(response.json())
+          if(response.json().RoleId == 1){
+            this.auth.sendToken(response.json().id)
             this.myRoute.navigate(["/Admin/ProfileOfAdmin"]);
           }
-          else if(response.json() == 2){
-            this.auth.sendToken(response.json())
+          else if(response.json().RoleId == 2){
+            //console.log(response.json().id);
+            this.auth.sendToken(response.json().id)
             this.myRoute.navigate(["/Staff/ProfileOfStaff"]);
           }
       },

@@ -42,6 +42,10 @@ import { GradesstudentComponent } from './gradesstudent/gradesstudent.component'
 import { CoursesstudentComponent } from './coursesstudent/coursesstudent.component';
 import { BooksstudentComponent } from './booksstudent/booksstudent.component';
 import { TasksstudentComponent } from './tasksstudent/tasksstudent.component';
+import { GradesforParentComponent } from './gradesfor-parent/gradesfor-parent.component';
+import { AbsencesforParentComponent } from './absencesfor-parent/absencesfor-parent.component';
+import { FeesforParentComponent } from './feesfor-parent/feesfor-parent.component';
+import { CoursesteacherComponent } from './coursesteacher/coursesteacher.component';
 
 @NgModule({
   declarations: [
@@ -78,6 +82,10 @@ import { TasksstudentComponent } from './tasksstudent/tasksstudent.component';
     CoursesstudentComponent,
     BooksstudentComponent,
     TasksstudentComponent,
+    GradesforParentComponent,
+    AbsencesforParentComponent,
+    FeesforParentComponent,
+    CoursesteacherComponent,
   ],
   imports: [
     FormsModule,

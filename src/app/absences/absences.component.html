@@ -85,7 +85,7 @@
             <input type="text" (keyup)="displayName($event)"  class="form-control" id="LN" ngModel name="stdId" #stdId="ngModel" required>
             <p class="alert-danger" *ngIf="!stdId.valid && stdId.touched">The Student ID Is Required</p>
             <br />
-            <label>{{fName}}  {{lName}}</label> <br />
+            <label class="btn btn-primary">{{fName}}  {{lName}}</label> <br />
               <input type="date" name="absenceDate" ngModel #absenceDate="ngModel" min="1/1/2000" max="30/12/2019">
               <button type="submit" >Save</button>
           </form>

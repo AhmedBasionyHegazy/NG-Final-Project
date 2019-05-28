@@ -32,6 +32,10 @@ import { GradesstudentComponent } from './gradesstudent/gradesstudent.component'
 import { CoursesstudentComponent } from './coursesstudent/coursesstudent.component';
 import { BooksstudentComponent } from './booksstudent/booksstudent.component';
 import { TasksstudentComponent } from './tasksstudent/tasksstudent.component';
+import { AbsencesforParentComponent } from './absencesfor-parent/absencesfor-parent.component';
+import { GradesforParentComponent } from './gradesfor-parent/gradesfor-parent.component';
+import { FeesforParentComponent } from './feesfor-parent/feesfor-parent.component';
+import { CoursesteacherComponent } from './coursesteacher/coursesteacher.component';
 
 const routes: Routes = [
   {
@@ -80,12 +84,10 @@ const routes: Routes = [
         children:
           [
             { path: 'Absences', component: AbsencesComponent },
-            { path: 'News', component: NewsComponent },
-            { path: 'Courses', component: CoursesComponent },
+            { path: 'Courses', component: CoursesteacherComponent },
             { path: 'Tasks', component: TasksComponent },
             { path: 'ProfileOfStaff', component: ProfileOfStaffComponent },
-            { path: 'Grades', component: GradesComponent },
-            { path: 'Books', component: BooksComponent },
+            { path: 'Books', component: BooksstudentComponent },
           ]
       }
     ]
@@ -98,13 +100,10 @@ const routes: Routes = [
         canActivateChild: [ParentGuard],
         children:
           [
-            { path: 'Absences', component: AbsencesComponent },
-            { path: 'News', component: NewsComponent },
-            { path: 'Courses', component: CoursesComponent },
-            { path: 'Tasks', component: TasksComponent },
+            { path: 'Absences', component: AbsencesforParentComponent },
+            { path: 'Courses', component: GradesforParentComponent },
             { path: 'ProfileOfParent', component: ProfileOfParentComponent },
-            { path: 'Grades', component: GradesComponent },
-            { path: 'Fees', component: FeesComponent },
+            { path: 'Fees', component: FeesforParentComponent },
           ]
       }
     ]

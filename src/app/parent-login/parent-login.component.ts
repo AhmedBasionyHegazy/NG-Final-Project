@@ -25,17 +25,20 @@ export class ParentLoginComponent implements OnInit {
   ngOnInit() {
   }
   login(data) {
+    //console.log(data.value);
+    
     this.http.get('http://localhost:31436/api/parents?email='+data.value.email+'&password='+data.value.pass)
     .subscribe(
       response=>{
-          if(response.json() == 4){
-            this.par.sendToken(response.json())
-            this.myRoute.navigate(["/Parent/ProfileOfParent"]);
+          if(response.json().roleID == 4){
+            //console.log(response.json().id);
+           this.par.sendToken(response.json().id);
+           this.myRoute.navigate(["/Parent/ProfileOfParent"]);
           }
       },
       error=>{console.log("error");
       },
-    )
+   )
   }
 
 }
